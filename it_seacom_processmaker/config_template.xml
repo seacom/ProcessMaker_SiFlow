@@ -1,0 +1,6 @@
+<zimletConfig name="it_seacom_processmaker" version="1.0">
+  <global>
+	<property name="allowedDomains">*</property>
+	<property name="ValidUserToReports">*</property>
+  </global>
+</zimletConfig>

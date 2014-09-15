@@ -1,0 +1,44 @@
+<zimlet name="it_seacom_processmaker" version="1.0" description="The Zimlet of ProcessMaker by Seacom Srl">
+	<include>it_seacom_processmaker.js</include>
+	<include>it_seacom_processmakerApi.js</include>
+	<include>template/overview.template.js</include>
+	<includeCSS>it_seacom_processmaker.css</includeCSS>
+	<handlerObject>it_seacom_processmakerHandlerObject</handlerObject>
+	<userProperties>
+		<property type="string" name="user" minLength="3" maxLength="32" label="${msg.UserID}"/>
+		<property type="password" name="passwd" minLength="4" maxLength="32" label="${msg.Password}"/>
+		<property type="string" name="server" minLength="4" maxLength="64" label="${msg.Server}"/>
+		<property type="string" name="workspace" minLength="3" maxLength="64" label="${msg.Workspace}"/>
+		<property type="enum" name="protocol" label="${msg.Protocol}" visible="true" value="http">
+			<item label="http" value="http" />
+			<item label="https" value="https" />
+		</property>
+		<property type="enum" name="tag" label="${msg.Tag}" visible="true" value="yes">
+			<item label="yes" value="yes" />
+			<item label="no" value="no" />
+		</property>
+		<property type="string" name="port" minLength="0" maxLength="4" label="${msg.Port}"/>
+		<property type="date" name="snooze" label="${msg.Snooze}" visible="false" value="predefined"/>
+		<property type="date" name="lastCheckNewCases" label="${msg.lastCheckNewCases}" visible="false" value="predefined"/>
+		<property type="String" name="dateSnooze" label="${msg.dateSnooze}" visible="false" value="no"/>
+	</userProperties>
+	<zimletPanelItem label="ProcessMaker" icon="PM-panelIcon">
+		<toolTipText>${msg.tooltip}</toolTipText>
+		<dragSource type="ZmMailMsg"/>
+		<contextMenu>
+			<menuItem label="${msg.preferencesConfig}" id="PREFERENCES_PM" icon="Preferences" />
+			<menuItem label="${msg.reminderConfig}" id="REMINDER" icon="emailreminder-panelIcon"/> 
+		<!--	<menuItem label="${msg.reports}" id="REPORTS"  icon="Reportistica"/>  -->
+			<menuItem label="${msg.caseUnassigned}" id="UNASSIGNED"  icon="Unassign"/>
+			<menuItem label="${msg.caseInbox}" id="INBOX" icon="IBX-panelIcon"/>
+			<menuItem label="${msg.caseDraft}" id="DRAFT" icon="DFT-panelIcon"/>
+			<menuItem label="${msg.about}" id="ABOUT_SEACOM" icon="seacom-panelIcon"/>
+		</contextMenu>
+	</zimletPanelItem>
+	<contentObject type="pm">
+		<matchOn>
+			<regex attrs="ig">Case\sID\W{1}\s[0-9a-z]{32}\s+INDEX\W{1}\s+\d+</regex> <!-- matches lab or user or remodel -->
+		</matchOn>
+		<toolTip>${msg.clickOnLink}</toolTip>
+	</contentObject>
+ </zimlet>

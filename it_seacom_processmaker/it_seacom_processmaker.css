@@ -1,0 +1,301 @@
+.ImgPM-panelIcon {
+  background: url("resources/pm.gif") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.Imgseacom-panelIcon {
+  background: url("resources/seacomSmall.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.pmlogo {
+  background: url("resources/pmlogo.png") no-repeat 0 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+.Imgemailreminder-panelIcon {
+  background: url("resources/emailReminder.gif") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgPreferences {
+  background: url("resources/preferences.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgReportistica {
+  background: url("resources/report.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgUnassign{
+  background: url("resources/rotate_cw.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.ImgReLogin{
+  background: url("resources/redo_login.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.center-holder {
+	text-align:center;
+}
+
+.center {
+	margin:0 auto;
+}
+
+.big {
+	font-size:25px;
+	font-weight:bold;
+}
+
+.med {
+	font-size:18px;
+}
+
+h3.pm-sec-label {
+	font-size: 14px;
+	margin: 0.5em 0;
+	border-bottom: 1px solid #777;
+}
+
+.pm-icon-right {
+	background: url("img/pm.gif") no-repeat 100% 50%;
+}
+
+.pm_commentRow {
+    background: #FFFFCC;
+    border-bottom: 1px solid #6E6E6E;
+    border-right: 1px solid #6E6E6E;
+	font-weight:bold;
+}
+.pm_infoMsg {
+    background: #CC0033;
+    border-bottom: 1px solid #6E6E6E;
+    border-right: 1px solid #6E6E6E;
+	font-weight:bold;
+	height:15px;
+}
+
+table.PM_table  {
+	border:gray;
+}
+
+.pm_yellow {
+    background: #FFFFCC;
+    border-bottom: 1px solid #6E6E6E;
+    border-right: 1px solid #6E6E6E;
+}
+.pm_bar_yellow {
+    background: #FFFFCC;
+    border-bottom: 1px solid #6E6E6E;
+	display:none;
+	overflow:auto;
+}
+.pm_lightyellow {
+    background: #FFFFD7;
+    border-bottom: 1px solid #6E6E6E;
+    border-right: 1px solid #6E6E6E;
+    border-left: 1px solid #BFBFBF;
+}
+
+
+table.PM_table td {
+	font-size:12px;
+	font-family:'Lucida Grande',sans-serif;
+	color:#333333;
+
+}
+
+
+table.PM_table input[type="text"]{
+	border-color:#3A73AB;
+	border-width:1;
+	border-style:solid;
+	width:200px;
+	height:20px;
+	padding:2px 4px;
+}
+
+option.pm_hdr {
+background-color:#808080;
+color:white;
+font-size:12px;
+font-weight:bold;
+}
+
+table.PM_table [type="password"]{
+	border-color:#3A73AB;
+	border-width:1;
+	border-style:solid;
+	width:200px;
+	height:20px;
+	padding:2px 4px;
+}
+
+table.PM_table textarea{
+	border-color:#3A73AB;
+	border-width:1;
+	border-style:solid;
+}
+
+table.PM_table select {
+	border-color:#3A73AB;
+	border-width:1;
+	border-style:solid;
+	font-size:12px;
+	font-family:'arial',sans-serif;
+	width:270px;
+}
+
+
+table.PM_table div {
+	font-size:12px;
+}
+
+table.PM_table a {
+	text-decoration: underline;
+	font-size:12px;
+	cursor:pointer;
+
+}
+
+.pm_hoverTable tr:hover { 
+	background-color:#ccd5e8; 
+}
+
+.PM_tableLabel {
+	font-size:17px;
+	font-weight:bold;
+	font-family:'Lucida Grande',sans-serif;
+
+}
+
+table.PM_table th {
+	text-align: left;
+	font-size:13px;
+	font-weight:bold;
+	font-family:'Lucida Grande',sans-serif;
+	text-decoration:underline;
+	cursor:pointer;
+	color:#2D2D2D;
+}
+
+.ImgADD-panelIcon {
+  background: url("resources/cases-add.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgIBX-panelIcon {
+  background: url("resources/cases-inbox.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgFDP-panelIcon {
+  background: url("resources/cases-inbox.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgCMP-panelIcon {
+  background: url("resources/cases-completed1.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgCNL-panelIcon {
+  background: url("resources/cases-cancelled.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgPSD-panelIcon {
+  background: url("resources/cases-paused.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgDOC-panelIcon {
+  background: url("resources/cases-documents.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgDFT-panelIcon {
+  background: url("resources/cases-draft.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgUAS-panelIcon {
+  background: url("resources/rotate_cw.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+.ImgPRT-panelIcon {
+  background: url("resources/cases-outbox.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+}
+
+#zpm_logo {
+	background: url("resources/seacomBig.png") no-repeat 0 0;
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+}
+
+#PROCESSLIST:hover {
+	background-color:#F0F0F0;
+}
+#CASELIST:hover {
+	background-color:#F0F0F0;
+}
+#DRAFT:hover {
+	background-color:#F0F0F0;
+}
+#PARTICIPATED:hover {
+	background-color:#F0F0F0;
+}
+#UNASSIGNED:hover {
+	background-color:#F0F0F0;
+}
+#PAUSED:hover {
+	background-color:#F0F0F0;
+}
+#RELOGIN:hover {
+	background-color:#F0F0F0;
+}
+#ABOUT_SEACOM:hover {
+	background-color:#F0F0F0;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<template id="folderGroup">
+<div class="overviewHeader">
+   <table cellpadding="0" cellspacing="0">
+     <tbody>
+       <tr>
+			<td style="width:16pxheight:16px" align="center">
+	   			<div class="ImgNodeExpanded" id="${headerId}"></div>
+			</td>								
+			<td class="imageCell"></td>
+			<td class="overviewHeader-Text">${name}</td>
+			<td style="width:16pxheight:16px"><$= AjxImg.getImageHtml("Blank_16") $>
+			</td>
+   		</tr>
+  	</tbody>
+</table>
+</div>
+<div class="containerGroup">
+</template>
+<template id="folderItemOpen">
+		<div class="DwtComposite">
+			<div class="DwtTreeItem" id="${id}">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+</template>
+<template id="folderItemLevel">
+						<td style="width:16px;height:16px" align="center">
+							<$= AjxImg.getImageHtml("Blank_16") $>
+						</td>
+</template>
+<template id="folderItemCollapsable">
+						<td style="width:16px;height:16px" align="center">
+							<div class="ImgNodeExpanded" id="${id}"></div>
+						</td>													
+</template>
+
+<template id="folderItemIcon">
+						<td style="width:16px;height:16px;padding-right:5px">
+							<div class="${icon}"></div>
+						</td>
+</template>
+<template id="folderItemClose">
+						<td class="DwtTreeItem-Text" nowrap="nowrap">
+							${name}
+						</td>
+						<td style="width:16px;height:16px;padding-right:5px">
+							<$= AjxImg.getImageHtml("Blank_16") $>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</template>
