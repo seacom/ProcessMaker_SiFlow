@@ -180,6 +180,7 @@ processMakerAPI.prototype._getCaseInfoOperation = function(caseId, ErrCallback) 
 processMakerAPI.prototype._inputDocumentProcessList = function(processId, name) {
     var jspUrl = this.parent.getResource("JSP/invokeMethod.jsp");
     var hdrs = [];
+	var attachedFileID = null;
     hdrs["Content-type"] = "application/x-www-form-urlencoded";
     var variableParameters = ['"', 'sessionId', '":"', this.sessionId, '","', 'processId', '":"', processId, '"'].join("");
     var param = ['operation=inputDocumentProcessList', '&parameters={', variableParameters, '}', '&language=', this.language, '&server=', this.server,'&workspace=', this.workspace,'&port=', this.port,'&protocol=', this.protocol].join("");

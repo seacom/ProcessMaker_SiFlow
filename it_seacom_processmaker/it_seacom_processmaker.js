@@ -104,22 +104,22 @@ processMaker.prototype.menuItemSelected = function(itemId){
 			}
 			break;
 		}
-		case "ABOUT_SEACOM": {
-			this._createAboutPage("SiFlow", "1.0", "2014");
+		case "ABOUT": {
+			this._createAboutPage();
 			break;
 		}
     }
 };
 
-processMaker.prototype._createAboutPage = function(zimletName, zimletVer, CopyrightYear){
+processMaker.prototype._createAboutPage = function(){
 	var view = new DwtComposite(this.getShell()); 
 	view.setSize("350", "230");
 	var html = new Array();
 	html.push(
 		"<div class='center-holder'>",
 			"<div class='center'>",
-				"<p class='big'>Zimlet " + zimletName + " " + zimletVer + "</p>",
-				"<p>The Zimlet of ProcessMaker by Seacom Srl</p>",
+				"<p class='big'>Zimlet SiFlow 1.0</p>",
+				"<p>powered by Seacom Srl</p>",
 			"</div>",
 		"</div>",
 		"<div class='med center-holder'>",
@@ -127,7 +127,7 @@ processMaker.prototype._createAboutPage = function(zimletName, zimletVer, Copyri
 			"</div>",
 		"</div>",
 		"<div class='med center-holder'>",
-			"<p>Copyright " + CopyrightYear + " Seacom Srl<br /><a href='http://www.seacom.it'>www.seacom.it</a></p>",
+			"<p>Copyright 2014 Seacom Srl<br /><a href='http://www.seacom.it'>http://www.seacom.it</a></p>",
 		"</div>"
 	);
 	view.getHtmlElement().innerHTML = html.join("");
@@ -137,6 +137,7 @@ processMaker.prototype._createAboutPage = function(zimletName, zimletVer, Copyri
 		parent : this.getShell(), 
 		standardButtons : [DwtDialog.OK_BUTTON]
 	});
+	dialog.getButton(DwtDialog.OK_BUTTON).setImage("TasksApp");
 	dialog.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, function() {dialog.popdown();}));
 	dialog.popup(); 
 }
@@ -677,6 +678,11 @@ processMaker.prototype._ShowRecuperateDialog = function(processId) {
         standardButtons:[DwtDialog.CANCEL_BUTTON],
         extraButtons:[recupButt, newCaseButt]
     });
+	
+	recDialog.getButton(recupId).setImage("Refresh");
+	recDialog.getButton(newCaseId).setImage("PM-panelIcon");
+	recDialog.getButton(DwtDialog.CANCEL_BUTTON).setImage("cancel");
+	
     recDialog.popup();
 
     //Define listeners
@@ -816,7 +822,16 @@ processMaker.prototype._openReminderDialog = function() {
         snoozeH.setValue(parseInt(minutes));
     }
 
-    this._reminderDialog = new ZmDialog({title:this.getMessage("reminderTitle"), view:view, parent:this.getShell(), standardButtons:[DwtDialog.OK_BUTTON, DwtDialog.CANCEL_BUTTON]});
+    this._reminderDialog = new ZmDialog({
+		title:this.getMessage("reminderTitle"), 
+		view:view, 
+		parent:this.getShell(), 
+		standardButtons:[DwtDialog.OK_BUTTON, DwtDialog.CANCEL_BUTTON]
+	});
+			
+	this._reminderDialog.getButton(DwtDialog.OK_BUTTON).setImage("emailreminder-panelIcon");
+	this._reminderDialog.getButton(DwtDialog.CANCEL_BUTTON).setImage("cancel");
+	
     this._reminderDialog.setButtonListener(DwtDialog.OK_BUTTON, new AjxListener(this, this._reminderDialogOkBtnListener, [snoozeH, snoozeM])); 
     this._reminderDialog.popup();
 };
@@ -966,6 +981,9 @@ processMaker.prototype._selectProcessView = function(response) {
             view:view, parent:this.getShell(), 
             standardButtons:[DwtDialog.OK_BUTTON, DwtDialog.CANCEL_BUTTON] 
         });
+		
+		dlg.getButton(DwtDialog.OK_BUTTON).setImage("PM-panelIcon");
+		dlg.getButton(DwtDialog.CANCEL_BUTTON).setImage("cancel");
 
         dlg.popup();
 
@@ -1291,7 +1309,7 @@ processMaker.prototype.buildOverview = function(){
                 this._setFolderTabOverview("UNASSIGNED", this.getMessage("Unassigned"), "casesSelfService", "ImgUAS-panelIcon"),
                 this._setFolderTabOverview("PAUSED", this.getMessage("Paused"), "casesPaused", "ImgPSD-panelIcon"),
                 this._setFolderTabOverview("RELOGIN", this.getMessage("redoLogin"), "reLogin", "ImgReLogin"),
-                this._setFolderTabOverview("ABOUT_SEACOM", this.getMessage("about"), "about", "Imgseacom-panelIcon")
+                this._setFolderTabOverview("ABOUT", this.getMessage("about"), "about", "Imgseacom-panelIcon")
             ]
         }
     ];
@@ -1439,7 +1457,7 @@ processMaker.prototype._overviewClickHandler = function(thisVal, thisGroup, ev) 
  */
 processMaker.prototype._openWebspace = function(thisVal, target) {	
 	if(target == 'about'){
-		thisVal._createAboutPage("SiFlow", "1.0", "2014");
+		thisVal._createAboutPage();
     }else if(target == 'reLogin'){
         var callback = new AjxCallback(thisVal, thisVal._openWebspace, [thisVal, "casesList"]);
         thisVal.pMakerAPI._login(callback);
