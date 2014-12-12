@@ -3,7 +3,7 @@ Zimlet ProcessMaker_SiFlow
 
 Seacom, the Italian distributor of Zimbra and ProcessMaker, analyzes, implements and realizes, through the integration between the two solutions, processes that can be triggered by emails sent or received, which can be managed directly from the Zimbra webmail, simplifying the work of every day.
 
-Currently this zimlet only works with a Zimbra 8.
+Currently this zimlet only works with a Zimbra 8.0.x.
 
 Installation
 ============
